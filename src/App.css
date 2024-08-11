@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.back{
+  min-height: 80vw;
+  background-image: url('/public/img/zclip.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+#top{
+  background-color: rgb(180, 6, 6);
+}
+
+.back h1{
+  font-size: 5rem;
+  color: white;
+  padding: 1rem 0;
+  letter-spacing: 0.15rem;
+}
+
+.back h3{
+  font-size: 2rem;
+}
+
+
+.back img{
+  height: 10rem;
+  border-radius: 10%;
+  margin: 2rem 0;;
+}
+
+#options select {
+  text-align: center;
+  margin: 1rem 0;
+  width: 15rem;
+  border-radius: 10px;
+  height: 1.6rem;
+  font-size: 0.95rem;
+}
