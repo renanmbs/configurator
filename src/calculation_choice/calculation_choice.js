@@ -33,14 +33,14 @@ export const CalculationChoice = (props) => {
             <div id="input">
                 <label className="inputs1">Width
                     <input type="number"value={Width} onChange={handleWidth}/>
-                    <button onClick={handleClickWidth}><TiDelete /></button>
+                    <button onClick={handleClickWidth}>X</button>
                 </label>
                 <br/>
                 
                 <label className="inputs2">
                     Spacing
                     <input type="number" value={Spacing} onChange={handleSpacing}/>
-                    <button onClick={handleClickSpacing}><TiDelete /></button>
+                    <button onClick={handleClickSpacing}>X</button>
                 </label>
 
                 <Calculation width={Width} spacing={Spacing}/>
