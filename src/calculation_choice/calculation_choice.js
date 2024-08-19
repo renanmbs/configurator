@@ -18,11 +18,11 @@ export const CalculationChoice = (props) => {
     }
 
     const handleClickWidth = () =>{
-        setWidth('0');
+        setWidth(0);
     }
 
     const handleClickSpacing = () =>{
-        setSpacing('0');
+        setSpacing(0);
     }
 
     return (
