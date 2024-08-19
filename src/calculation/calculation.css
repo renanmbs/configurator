@@ -1,80 +1,31 @@
-#calc{
-    margin: 10rem 20rem;
-    background-color: rgb(180, 6, 6);
-    padding: 2rem;
-    border-radius: 1rem;
-    color: white;
+#results p{
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
-#calc h2{
-    font-size: 2rem;
+#results span{
+    color: black;
 }
 
-#input{
-    margin: 2rem 0rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+#download{
+    display: grid;
     place-items: center;
-    text-align: center;
+    margin: 3rem 0  1rem 0;
 }
 
-#input .inputs1{
-    margin: 0 1rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#download button{
+    transition: all 200ms ease-in;
+    border: solid 0.5px black;
+    font-style: italic;
+    border-radius: 5px;
 }
 
-#input .inputs2{
-    margin: 0 1rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#download button:active{
+    transform: scale(0.95);
+    color: black;
+    border: solid 1px black;
 }
 
-input::placeholder{
-    text-align: center;
-}
-
-#input input{
-    text-align: center;
-    margin: 1rem 0rem 1rem 1rem;
-    font-size: larger;
-    padding: 0rem 5rem;
-    border: solid white;
-    transition: all 300ms;
-}
-
-#input input:focus{
-    border: solid rgba(180, 6, 6, 0.75);
-    transform: scale(1.5);
-    z-index: 1;
-}
-
-#input label{
-    font-size: 1.3rem;
-}
-
-#input button, input[type*="number"]{
-    height: 2rem;
-    box-sizing: border-box;
-}
-
-#input button{
-    margin: 0rem 0rem 0 0.2rem;
-    padding: 0.5rem;
-    background-color: white;
-    border: transparent;
-    font-size: 1.8rem;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(180, 6, 6, 0.75);
+#download button:hover{
+    border: solid 3px white;
 }
