@@ -17,9 +17,9 @@ export const CalculationChoice = (props) => {
         setSpacing(target.value);
     }
 
-    const handleClickWidth = () =>{
-        setWidth(0);
-    }
+    // const handleClickWidth = () =>{
+    //     setWidth(0);
+    // }
 
     // const handleClickSpacing = () =>{
     //     setSpacing(0);
@@ -33,7 +33,7 @@ export const CalculationChoice = (props) => {
             <div id="input">
                 <label className="inputs1">Width
                     <input type="number"value={Width} onChange={handleWidth}/>
-                    <button onClick={handleClickWidth}>X</button>
+                    {/* <button onClick={handleClickWidth}>X</button> */}
                 </label>
                 <br/>
                 
