@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './calculation_choice.css';
-import { TiDelete } from "react-icons/ti";
+// import { TiDelete } from "react-icons/ti";
 import { Calculation } from "../calculation/calculation";
 
 

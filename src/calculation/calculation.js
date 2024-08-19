@@ -119,8 +119,7 @@ export const Calculation = (props) => {
     }
 
     return (
-        <div>{ parseInt(props.width) !== 0 && !isNaN(props.width) ? 
-            <div id="results">
+        <div id="results">
                 <h2>Results</h2>
                 <p>Width: <span>{props.width}</span></p>
                 <p>Spacing: <span>{props.spacing}</span></p>
@@ -132,10 +131,6 @@ export const Calculation = (props) => {
                 <div id="download">      
                     <button onClick={downloadResults}>Download Results</button>
                 </div>
-            </div>
-            :
-            ''
-            }
         </div>
     );
 };
