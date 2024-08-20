@@ -10,16 +10,16 @@
 //     useEffect(() => {
 
 //         const amt_holes_calc = () => {
-//             let total_holes = Math.floor(parseInt(props.width) / parseInt(props.spacing));
+//             let total_holes = Math.floor(parseFloat(props.width) / parseFloat(props.spacing));
 //             setAmount_holes(total_holes);
 //         }
 
 //         const borders = () => {
 
-//             let b1 = ((parseInt(props.width) - (parseInt(props.spacing) * parseInt(amount_holes) - 1))/2);
+//             let b1 = ((parseFloat(props.width) - (parseFloat(props.spacing) * parseFloat(amount_holes) - 1))/2);
 //             setBorder_1(b1);
 
-//             let b2 = (parseInt(props.width) - parseInt(border_1) );
+//             let b2 = (parseFloat(props.width) - parseFloat(border_1) );
 //             setBorder_2(b2);
 
 //         }
@@ -30,7 +30,7 @@
 
 //             for (let i = 0; i < amount_holes; i++){
 
-//                 let calc = border_1 + (parseInt(props.spacing) * [i] );
+//                 let calc = border_1 + (parseFloat(props.spacing) * [i] );
 
 //                 console.log(calc);
 
@@ -76,13 +76,13 @@ export const Calculation = (props) => {
 
     useEffect(() => {
         const calculate = () => {
-            let total_holes = Math.floor(parseInt(props.width) / parseInt(props.spacing));
-            let b1 = (parseInt(props.width) - (parseInt(props.spacing) * (total_holes - 1))) / 2;
-            let b2 = parseInt(props.width) - b1;
+            let total_holes = Math.floor(parseFloat(props.width) / parseFloat(props.spacing));
+            let b1 = (parseFloat(props.width) - (parseFloat(props.spacing) * (total_holes - 1))) / 2;
+            let b2 = parseFloat(props.width) - b1;
 
             let hole_plac = [];
             for (let i = 0; i < total_holes; i++) {
-                let calc = b1 + (parseInt(props.spacing) * i);
+                let calc = b1 + (parseFloat(props.spacing) * i);
                 hole_plac.push(calc);
             }
 
@@ -114,7 +114,7 @@ export const Calculation = (props) => {
         URL.revokeObjectURL(url);
     };
 
-    if (isNaN(parseInt(props.width)) || isNaN(parseInt(props.spacing)) || parseInt(props.width) <= 0 || parseInt(props.spacing) <= 0) {
+    if (isNaN(parseFloat(props.width)) || isNaN(parseFloat(props.spacing)) || parseFloat(props.width) <= 0 || parseFloat(props.spacing) <= 0) {
         return null;
     }
 
