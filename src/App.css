@@ -4,7 +4,7 @@
 }
 
 .back{
-  min-height: 80vw;
+  min-height: 100vh;
   background-image: url('/public/img/zclip.png');
   background-position: center;
   background-repeat: no-repeat;
