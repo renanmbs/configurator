@@ -76,24 +76,49 @@ export const Calculation = (props) => {
 
     useEffect(() => {
         const calculate = () => {
-            let total_holes = Math.floor(parseFloat(props.width) / parseFloat(props.spacing));
-            let b1 = (parseFloat(props.width) - (parseFloat(props.spacing) * (total_holes - 1))) / 2;
-            let b2 = parseFloat(props.width) - b1;
-
+            const width = parseFloat(props.width);
+            const spacing = parseFloat(props.spacing);
+    
+            // Validation: Ensure both width and spacing are positive numbers
+            if (isNaN(width) || isNaN(spacing) || width <= 0 || spacing <= 0) {
+                setAmount_holes(0);
+                setBorder_1(0);
+                setBorder_2(0);
+                setHole_placement([]);
+                return;
+            }
+    
+            // Calculate the number of holes
+            let total_holes = Math.floor(width / spacing);
+            
+            // Ensure total_holes is not negative or zero
+            if (total_holes <= 0) {
+                total_holes = 0;
+                setAmount_holes(0);
+                setHole_placement([]);
+                return;
+            }
+    
+            // Calculate borders
+            let b1 = (width - (spacing * (total_holes - 1))) / 2;
+            let b2 = width - b1;
+    
+            // Calculate hole placement
             let hole_plac = [];
             for (let i = 0; i < total_holes; i++) {
-                let calc = b1 + (parseFloat(props.spacing) * i);
+                let calc = b1 + (spacing * i);
                 hole_plac.push(calc);
             }
-
+    
+            // Update the state
             setAmount_holes(total_holes);
             setBorder_1(b1);
             setBorder_2(b2);
             setHole_placement(hole_plac);
         };
-
+    
         calculate();
-    }, [props.width, props.spacing]);
+    }, [props.width, props.spacing]);    
 
     const downloadResults = () => {
         const content = `

@@ -43,3 +43,19 @@
   height: 1.6rem;
   font-size: 0.95rem;
 }
+
+@media only screen and (max-width: 768px) {
+
+  .back{
+    min-height: 110vh;
+    padding: 0rem 0 2rem 0;
+  }
+
+  .back h1{
+    font-size: 2.5rem;
+  }
+
+  .back h3{
+    font-size: 1.8rem;
+  }
+}
